@@ -1,5 +1,5 @@
-import { Container, Title, TopBar } from "../components/shared/index";
-// !остановился на времени 1:04:31
+import { Container, Filters, Title, TopBar } from "../components/shared/index";
+
 export default function Home() {
   return (
     <>
@@ -8,7 +8,19 @@ export default function Home() {
       </Container>
       {/* top-bar */}
       <TopBar />
-      <div style={{ height: "3000px" }} />
+
+      <Container className="mt-10 pb-14">
+        <div className="flex gap-[60px]">
+          {/* фильтрация (меню фильтрации) */}
+          <div className="w-[250px]">
+            <Filters />
+          </div>
+          {/* список товаров */}
+          <div className="flex-1">
+            <div className="flex flex-col gap-16">Список товаров</div>
+          </div>
+        </div>
+      </Container>
     </>
   );
 }
